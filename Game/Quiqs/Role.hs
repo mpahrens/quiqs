@@ -22,9 +22,9 @@ data Effect = AttackMod Int
             | Damage {dmg :: Int, dist :: Int, style :: Style}
             | Block Int
 
-Style :: Slash | Pierce | Magic
+data Style = Slash | Pierce | Magic
 
-data Guild = Guild { gName :: String,
+data Guild = Guild { gName :: String
                    , gExp :: Int
                    , founder :: String}
 

@@ -1,5 +1,5 @@
-{-#LANGUAGE GADTs, DerivingFunctor #-}
-module Quiqs
+{-#LANGUAGE GADTs, DeriveFunctor #-}
+module Game.Quiqs
 (
 
 )where
@@ -9,41 +9,40 @@ import qualified Game.Quiqs.Building as Bu
 import qualified Game.Quiqs.Faction  as F
 import qualified Game.Quiqs.Role     as R
 -- free monad
-import Data.Free (Free(..))
-import qualified Data.Free as Free
+import Control.Monad.Free (Free(..))
+import qualified Control.Monad.Free as Free
 -- Position manipulation
 import Data.Vect
 
-type Ent = Bld Bu.Building Vec3
-         | Per P.Role Vec3
-         | Fae P.Role Bu.Fae Vec3
+data Ent = Bld Bu.Building Vec3
+         | Per R.Role Vec3
+         | Fae R.Role Bu.Fae Vec3
 
 -- Interpretter commands for a game of Quiqs
-data Quiqs a next where
-  Login        :: String -> String -> (R.Role -> next) -> Quiqs R.Role next
-  Logoff       :: (R.Role -> next) -> Quiqs R.Role next
-  Gather       :: (Int -> next) -> Quiqs Int next
-  SelNextEnemy :: (Ent -> next) -> Quiqs Ent next
-  SelNextBuild :: (Ent -> next) -> Quiqs Ent next
-  SelNextAlly  :: (Ent -> next) -> Quiqs Ent next
-  MainAttack   :: Ent -> (Skirmish -> next) -> Quiqs Skirmish next
-  SubAttack    :: Ent -> (Skirmish -> next) -> Quiqs Skirmish next
-  Defend       :: next -> Quiqs () next
-  Me           :: (Ent -> next) -> Quiqs Ent next
-  UseAbility   :: R.Ability -> Ent -> (Skirmish -> next) -> Quiqs Skirmish next
-  Build        :: Bu.Building -> (Ent -> next) -> Quiqs Ent next
-  Move         :: Vec3 -> (Ent -> next) -> Quiqs Ent next
-  FaceDir      :: Direction -> (Ent -> next) -> Quiqs Ent next
-  EnterBoard   :: Bo.Board -> (Ent -> next) -> Quiqs Ent next
-  MkFae        :: Bu.Fae -> (Ent -> next) -> Quiqs Ent next
-  GiveCharms   :: Int -> Ent -> next -> Quiqs () next
-  WearEquip    :: Equip -> (R.Role -> next) -> Quiqs R.Role next
+data Quiqs next =
+    Login        String String  (R.Role -> next)
+  | Logoff       (R.Role -> next)
+  | Gather       (Int -> next)
+  | SelNextEnemy (Ent -> next)
+  | SelNextBuild (Ent -> next)
+  | SelNextAlly  (Ent -> next)
+  | MainAttack   Ent (Skirmish -> next)
+  | SubAttack    Ent (Skirmish -> next)
+  | Defend       next
+  | Me           (Ent -> next)
+  | UseAbility   R.Ability Ent (Skirmish -> next)
+  | Build        Bu.Building (Ent -> next)
+  | Move         Vec3 next
+  | FaceDir      Direction next
+  | EnterBoard   Bo.Board next
+  | MkFae        Bu.Fae next
+  | GiveCharms   Int Ent next
+  | WearEquip    R.Equip (R.Role -> next)
   deriving (Functor)
-
 data Direction = N | NE | E | SE | S | SW | W | NW
 data Skirmish = Skirmish {msg :: String}
 
-data QuiqGame a = Free (Quiqs a ())
+type QuiqGame = Free Quiqs
 
 -- combinator forms
 login :: String -> String -> QuiqGame R.Role
@@ -76,27 +75,27 @@ defend = Free.liftF $ Defend ()
 me :: QuiqGame Ent
 me = Free.liftF $ Me id
 
-useAbility :: Ability -> Ent -> QuiqGame Skirmish
-useAbility ability target = Free.liftF $ UseAbility ability target ()
+useAbility :: R.Ability -> Ent -> QuiqGame Skirmish
+useAbility ability target = Free.liftF $ UseAbility ability target id
 
 build :: Bu.Building -> QuiqGame Ent
-build b = Free.liftF $ Build b ()
+build b = Free.liftF $ Build b id
 
-move :: Vec3 -> QuiqGame R.Ent
+move :: Vec3 -> QuiqGame ()
 move to = Free.liftF $ Move to ()
 
-face :: Direction -> QuiqGame Ent
+face :: Direction -> QuiqGame ()
 face dir = Free.liftF $ FaceDir dir ()
 
-enter :: Bo.Board -> QuiqGame Ent
-enter board = Free.liftF $ EnterBoard board id
+enter :: Bo.Board -> QuiqGame ()
+enter board = Free.liftF $ EnterBoard board ()
 
-fae :: Bu.Fae -> QuiqGame Ent
-fae f = Free.liftF $ MkFae f id
+fae :: Bu.Fae -> QuiqGame ()
+fae f = Free.liftF $ MkFae f ()
 
 -- use like 3 `charmsTo` friend
 charmsTo :: Int -> Ent -> QuiqGame ()
 charmsTo n friend = Free.liftF $ GiveCharms n friend ()
 
-wear :: Equip -> QuiqGame R.Role
+wear :: R.Equip -> QuiqGame R.Role
 wear equip = Free.liftF $ WearEquip equip id

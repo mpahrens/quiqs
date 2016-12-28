@@ -22,7 +22,7 @@ library
                      , Game.Quiqs.Faction
                      , Game.Quiqs.Role
   -- other-modules:
-  other-extensions:    GADTs, DerivingFunctor
+  other-extensions:    GADTs, DeriveFunctor
   build-depends:       base >=4.8 && <4.9, free, vect
   default-language:    Haskell2010
 

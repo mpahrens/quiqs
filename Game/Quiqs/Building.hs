@@ -17,7 +17,7 @@ data Building =
               -- building housing a dipolomat
               | Chancery {}
               -- summonry tower
-              | Steeple {summoned :: Golem }
+              | Steeple {summoned :: Fae }
               -- home base
               | Keep {}
               -- produces charms for power

@@ -1,0 +1,184 @@
+
+==================== FINAL INTERFACE ====================
+2016-12-28 04:20:57.514704 UTC
+
+interface quiqs_Dvi6RpKYBdRHLprIFkUIK4:Game.Quiqs.Role 7103
+  interface hash: 6c0674f950d40248b775df68f318de55
+  ABI hash: 1591d466fe837c5991efdc84714e39ce
+  export-list hash: cd1183bf91bc912662c5b6b3e9bd34ca
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: 02fa40f49231f5149bb2a1299f114ef3
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Game.Quiqs.Role.Ability
+  Game.Quiqs.Role.Effect{Game.Quiqs.Role.AccuracyMod Game.Quiqs.Role.AttackMod Game.Quiqs.Role.Block Game.Quiqs.Role.Damage Game.Quiqs.Role.DefenseMod Game.Quiqs.Role.dist Game.Quiqs.Role.dmg Game.Quiqs.Role.style}
+  Game.Quiqs.Role.Equip{Game.Quiqs.Role.Body Game.Quiqs.Role.Feet Game.Quiqs.Role.Head Game.Quiqs.Role.Legs Game.Quiqs.Role.MainWeapon Game.Quiqs.Role.SubWeapon}
+  Game.Quiqs.Role.Guild{Game.Quiqs.Role.Guild Game.Quiqs.Role.founder Game.Quiqs.Role.gExp Game.Quiqs.Role.gName}
+  Game.Quiqs.Role.Role{Game.Quiqs.Role.Role Game.Quiqs.Role.abilities Game.Quiqs.Role.attack Game.Quiqs.Role.defense Game.Quiqs.Role.equipped Game.Quiqs.Role.name Game.Quiqs.Role.rStyle}
+  Game.Quiqs.Role.Style{Game.Quiqs.Role.Magic Game.Quiqs.Role.Pierce Game.Quiqs.Role.Slash}
+module dependencies:
+package dependencies: base-4.8.2.0* ghc-prim-0.4.0.0
+                      integer-gmp-1.0.0.0
+orphans: base-4.8.2.0:GHC.Base base-4.8.2.0:GHC.Float
+family instance modules: base-4.8.2.0:Control.Applicative
+                         base-4.8.2.0:Data.Either base-4.8.2.0:Data.Monoid
+                         base-4.8.2.0:Data.Type.Equality base-4.8.2.0:GHC.Generics
+import  -/  base-4.8.2.0:GHC.Base 1db77db5dae73d8c424c85b09fbadb89
+import  -/  base-4.8.2.0:Prelude 694dcaf039efe62df1c44834e2dbd2fb
+f8795cc47ea9a3d17239285c170de294
+  data Ability
+    Promotable
+e523b124abcac3999ebb4597813dcd19
+  data Effect
+    = AttackMod GHC.Types.Int
+    | DefenseMod GHC.Types.Int
+    | AccuracyMod GHC.Types.Int
+    | Damage {dmg :: GHC.Types.Int,
+              dist :: GHC.Types.Int,
+              style :: Game.Quiqs.Role.Style}
+    | Block GHC.Types.Int
+bf03baf092fddf8fcd073f153754804c
+  data Equip
+    = Head GHC.Base.String [Game.Quiqs.Role.Effect]
+    | Body GHC.Base.String [Game.Quiqs.Role.Effect]
+    | Legs GHC.Base.String [Game.Quiqs.Role.Effect]
+    | Feet GHC.Base.String [Game.Quiqs.Role.Effect]
+    | MainWeapon GHC.Base.String [Game.Quiqs.Role.Effect]
+    | SubWeapon GHC.Base.String [Game.Quiqs.Role.Effect]
+1eb206fc405b3040f796fc2801c491ab
+  data Guild
+    = Guild {gName :: GHC.Base.String,
+             gExp :: GHC.Types.Int,
+             founder :: GHC.Base.String}
+5eb42de52907ec6eac885a29634ddce4
+  data Role
+    = Role {name :: GHC.Base.String,
+            attack :: GHC.Types.Int,
+            defense :: GHC.Types.Int,
+            equipped :: [Game.Quiqs.Role.Equip],
+            rStyle :: Game.Quiqs.Role.Style,
+            abilities :: [Game.Quiqs.Role.Ability]}
+53c9a6f23c1f1c24b9eed5462a96efd7
+  data Style = Slash | Pierce | Magic
+    Promotable
+9fc476988a882f1b10ef04532a1e76e7
+  abilities :: Game.Quiqs.Role.Role -> [Game.Quiqs.Role.Ability]
+  RecSel Game.Quiqs.Role.Role
+  {- Arity: 1, HasNoCafRefs,
+     Strictness: <S(LLLLLS),1*U(A,A,A,A,A,1*U)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ ds :: Game.Quiqs.Role.Role ->
+                 case ds of wild { Game.Quiqs.Role.Role ds1 ds2 ds3 ds4 ds5 ds6 ->
+                 ds6 }) -}
+9838cebe2c87b9cc7f630458925b7b8d
+  attack :: Game.Quiqs.Role.Role -> GHC.Types.Int
+  RecSel Game.Quiqs.Role.Role
+  {- Arity: 1, HasNoCafRefs,
+     Strictness: <S(LSLLLL),1*U(A,1*U(U),A,A,A,A)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ ds :: Game.Quiqs.Role.Role ->
+                 case ds of wild { Game.Quiqs.Role.Role ds1 ds2 ds3 ds4 ds5 ds6 ->
+                 ds2 }) -}
+4ca594a6314296aa28e377d7a2f3e917
+  defense :: Game.Quiqs.Role.Role -> GHC.Types.Int
+  RecSel Game.Quiqs.Role.Role
+  {- Arity: 1, HasNoCafRefs,
+     Strictness: <S(LLSLLL),1*U(A,A,1*U(U),A,A,A)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ ds :: Game.Quiqs.Role.Role ->
+                 case ds of wild { Game.Quiqs.Role.Role ds1 ds2 ds3 ds4 ds5 ds6 ->
+                 ds3 }) -}
+3047089967b4650ca6c53970096157c3
+  dist :: Game.Quiqs.Role.Effect -> GHC.Types.Int
+  RecSel Game.Quiqs.Role.Effect
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ ds :: Game.Quiqs.Role.Effect ->
+                 case ds of wild {
+                   DEFAULT -> Game.Quiqs.Role.dist1
+                   Game.Quiqs.Role.Damage ds1 ds2 ds3 -> ds2 }) -}
+1d0c8fbd96d4287b07d82b49c77ef235
+  dist1 :: GHC.Types.Int
+  {- Strictness: b -}
+1b72e93d27abc7e0c612580cd08ac6ac
+  dmg :: Game.Quiqs.Role.Effect -> GHC.Types.Int
+  RecSel Game.Quiqs.Role.Effect
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ ds :: Game.Quiqs.Role.Effect ->
+                 case ds of wild {
+                   DEFAULT -> Game.Quiqs.Role.dmg1
+                   Game.Quiqs.Role.Damage ds1 ds2 ds3 -> ds1 }) -}
+58b00cea11d7b553f001e84c650b216c
+  dmg1 :: GHC.Types.Int
+  {- Strictness: b -}
+15f45a1a1ef4a8eeca321552d294fa29
+  equipped :: Game.Quiqs.Role.Role -> [Game.Quiqs.Role.Equip]
+  RecSel Game.Quiqs.Role.Role
+  {- Arity: 1, HasNoCafRefs,
+     Strictness: <S(LLLSLL),1*U(A,A,A,1*U,A,A)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ ds :: Game.Quiqs.Role.Role ->
+                 case ds of wild { Game.Quiqs.Role.Role ds1 ds2 ds3 ds4 ds5 ds6 ->
+                 ds4 }) -}
+199150dc04e56744581dc69bc4b2fa47
+  founder :: Game.Quiqs.Role.Guild -> GHC.Base.String
+  RecSel Game.Quiqs.Role.Guild
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(LLS),1*U(A,A,1*U)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ ds :: Game.Quiqs.Role.Guild ->
+                 case ds of wild { Game.Quiqs.Role.Guild ds1 ds2 ds3 -> ds3 }) -}
+27a2e8ecbdbc582747f1a8cba66eb620
+  gExp :: Game.Quiqs.Role.Guild -> GHC.Types.Int
+  RecSel Game.Quiqs.Role.Guild
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(LSL),1*U(A,1*U(U),A)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ ds :: Game.Quiqs.Role.Guild ->
+                 case ds of wild { Game.Quiqs.Role.Guild ds1 ds2 ds3 -> ds2 }) -}
+a9ac592b52b64188ec334fc70cbb2e6e
+  gName :: Game.Quiqs.Role.Guild -> GHC.Base.String
+  RecSel Game.Quiqs.Role.Guild
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(SLL),1*U(1*U,A,A)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ ds :: Game.Quiqs.Role.Guild ->
+                 case ds of wild { Game.Quiqs.Role.Guild ds1 ds2 ds3 -> ds1 }) -}
+6daaeda2ae1b45042488a2fe82d477ce
+  name :: Game.Quiqs.Role.Role -> GHC.Base.String
+  RecSel Game.Quiqs.Role.Role
+  {- Arity: 1, HasNoCafRefs,
+     Strictness: <S(SLLLLL),1*U(1*U,A,A,A,A,A)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ ds :: Game.Quiqs.Role.Role ->
+                 case ds of wild { Game.Quiqs.Role.Role ds1 ds2 ds3 ds4 ds5 ds6 ->
+                 ds1 }) -}
+09d73d3245ddd8e71f65e7bb99b9bda7
+  rStyle :: Game.Quiqs.Role.Role -> Game.Quiqs.Role.Style
+  RecSel Game.Quiqs.Role.Role
+  {- Arity: 1, HasNoCafRefs,
+     Strictness: <S(LLLLSL),1*U(A,A,A,A,1*U,A)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ ds :: Game.Quiqs.Role.Role ->
+                 case ds of wild { Game.Quiqs.Role.Role ds1 ds2 ds3 ds4 ds5 ds6 ->
+                 ds5 }) -}
+29678a2d136e201272eda70b07503a9e
+  style :: Game.Quiqs.Role.Effect -> Game.Quiqs.Role.Style
+  RecSel Game.Quiqs.Role.Effect
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ ds :: Game.Quiqs.Role.Effect ->
+                 case ds of wild {
+                   DEFAULT -> Game.Quiqs.Role.style1
+                   Game.Quiqs.Role.Damage ds1 ds2 ds3 -> ds3 }) -}
+d15d034d1e295163522105ca70a799a4
+  style1 :: Game.Quiqs.Role.Style
+  {- Strictness: b -}
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: safe
+require own pkg trusted: False
+

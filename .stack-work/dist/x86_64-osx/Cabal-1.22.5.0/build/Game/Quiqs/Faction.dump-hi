@@ -1,0 +1,34 @@
+
+==================== FINAL INTERFACE ====================
+2016-12-28 04:20:57.665472 UTC
+
+interface quiqs_Dvi6RpKYBdRHLprIFkUIK4:Game.Quiqs.Faction 7103
+  interface hash: 519e095a55048c9e78b1a5a205fcc74c
+  ABI hash: 424da155c9459d3d83d95deb9de6e92a
+  export-list hash: f05d9135579f61f40ba7eff1105d8c5d
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: 02fa40f49231f5149bb2a1299f114ef3
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Game.Quiqs.Faction.Faction{Game.Quiqs.Faction.Brown Game.Quiqs.Faction.Gray Game.Quiqs.Faction.Orange Game.Quiqs.Faction.Purple Game.Quiqs.Faction.Teal}
+module dependencies:
+package dependencies: base-4.8.2.0* ghc-prim-0.4.0.0
+                      integer-gmp-1.0.0.0
+orphans: base-4.8.2.0:GHC.Base base-4.8.2.0:GHC.Float
+family instance modules: base-4.8.2.0:Control.Applicative
+                         base-4.8.2.0:Data.Either base-4.8.2.0:Data.Monoid
+                         base-4.8.2.0:Data.Type.Equality base-4.8.2.0:GHC.Generics
+import  -/  base-4.8.2.0:Prelude 694dcaf039efe62df1c44834e2dbd2fb
+9421cd53caafb16ad77404b0ae3adbc9
+  data Faction = Purple | Orange | Brown | Teal | Gray
+    Promotable
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: safe
+require own pkg trusted: False
+
