@@ -1,0 +1,74 @@
+Configuring distributed-process-0.6.6...
+Building distributed-process-0.6.6...
+Preprocessing library distributed-process-0.6.6...
+[ 1 of 28] Compiling Control.Distributed.Process.Internal.StrictContainerAccessors ( src/Control/Distributed/Process/Internal/StrictContainerAccessors.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Control/Distributed/Process/Internal/StrictContainerAccessors.o )
+[ 2 of 28] Compiling Control.Distributed.Process.Internal.WeakTQueue ( src/Control/Distributed/Process/Internal/WeakTQueue.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Control/Distributed/Process/Internal/WeakTQueue.o )
+
+src/Control/Distributed/Process/Internal/WeakTQueue.hs:26:1: Warning:
+    The import of ‘unIO’ from module ‘GHC.IO’ is redundant
+[ 3 of 28] Compiling Control.Distributed.Process.Internal.StrictList ( src/Control/Distributed/Process/Internal/StrictList.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Control/Distributed/Process/Internal/StrictList.o )
+[ 4 of 28] Compiling Control.Distributed.Process.Internal.StrictMVar ( src/Control/Distributed/Process/Internal/StrictMVar.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Control/Distributed/Process/Internal/StrictMVar.o )
+
+src/Control/Distributed/Process/Internal/StrictMVar.hs:17:1: Warning:
+    The import of ‘Control.Applicative’ is redundant
+      except perhaps to import instances from ‘Control.Applicative’
+    To import instances alone, use: import Control.Applicative()
+
+src/Control/Distributed/Process/Internal/StrictMVar.hs:39:1: Warning:
+    The import of ‘unIO’ from module ‘GHC.IO’ is redundant
+[ 5 of 28] Compiling Control.Distributed.Process.Internal.CQueue ( src/Control/Distributed/Process/Internal/CQueue.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Control/Distributed/Process/Internal/CQueue.o )
+
+src/Control/Distributed/Process/Internal/CQueue.hs:34:1: Warning:
+    The import of ‘Control.Applicative’ is redundant
+      except perhaps to import instances from ‘Control.Applicative’
+    To import instances alone, use: import Control.Applicative()
+
+src/Control/Distributed/Process/Internal/CQueue.hs:48:1: Warning:
+    The import of ‘Data.Traversable’ is redundant
+      except perhaps to import instances from ‘Data.Traversable’
+    To import instances alone, use: import Data.Traversable()
+
+src/Control/Distributed/Process/Internal/CQueue.hs:50:1: Warning:
+    The import of ‘unIO’ from module ‘GHC.IO’ is redundant
+[ 6 of 28] Compiling Control.Distributed.Process.Internal.BiMultiMap ( src/Control/Distributed/Process/Internal/BiMultiMap.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Control/Distributed/Process/Internal/BiMultiMap.o )
+[ 7 of 28] Compiling Control.Distributed.Process.Serializable ( src/Control/Distributed/Process/Serializable.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Control/Distributed/Process/Serializable.o )
+[ 8 of 28] Compiling Control.Distributed.Process.Internal.Types ( src/Control/Distributed/Process/Internal/Types.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Control/Distributed/Process/Internal/Types.o )
+[ 9 of 28] Compiling Control.Distributed.Process.Management.Internal.Types ( src/Control/Distributed/Process/Management/Internal/Types.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Control/Distributed/Process/Management/Internal/Types.o )
+
+src/Control/Distributed/Process/Management/Internal/Types.hs:19:1: Warning:
+    The import of ‘Control.Applicative’ is redundant
+      except perhaps to import instances from ‘Control.Applicative’
+    To import instances alone, use: import Control.Applicative()
+[10 of 28] Compiling Control.Distributed.Process.Internal.Messaging ( src/Control/Distributed/Process/Internal/Messaging.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Control/Distributed/Process/Internal/Messaging.o )
+[11 of 28] Compiling Control.Distributed.Process.UnsafePrimitives ( src/Control/Distributed/Process/UnsafePrimitives.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Control/Distributed/Process/UnsafePrimitives.o )
+[12 of 28] Compiling Control.Distributed.Process.Management.Internal.Bus ( src/Control/Distributed/Process/Management/Internal/Bus.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Control/Distributed/Process/Management/Internal/Bus.o )
+[13 of 28] Compiling Control.Distributed.Process.Management.Internal.Trace.Types ( src/Control/Distributed/Process/Management/Internal/Trace/Types.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Control/Distributed/Process/Management/Internal/Trace/Types.o )
+[14 of 28] Compiling Control.Distributed.Process.Internal.Primitives ( src/Control/Distributed/Process/Internal/Primitives.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Control/Distributed/Process/Internal/Primitives.o )
+[15 of 28] Compiling Control.Distributed.Process.Internal.Closure.BuiltIn ( src/Control/Distributed/Process/Internal/Closure/BuiltIn.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Control/Distributed/Process/Internal/Closure/BuiltIn.o )
+[16 of 28] Compiling Control.Distributed.Process.Internal.Spawn ( src/Control/Distributed/Process/Internal/Spawn.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Control/Distributed/Process/Internal/Spawn.o )
+[17 of 28] Compiling Control.Distributed.Process.Internal.Closure.TH ( src/Control/Distributed/Process/Internal/Closure/TH.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Control/Distributed/Process/Internal/Closure/TH.o )
+
+src/Control/Distributed/Process/Internal/Closure/TH.hs:15:1: Warning:
+    The import of ‘Control.Applicative’ is redundant
+      except perhaps to import instances from ‘Control.Applicative’
+    To import instances alone, use: import Control.Applicative()
+[18 of 28] Compiling Control.Distributed.Process.Management.Internal.Trace.Primitives ( src/Control/Distributed/Process/Management/Internal/Trace/Primitives.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Control/Distributed/Process/Management/Internal/Trace/Primitives.o )
+[19 of 28] Compiling Control.Distributed.Process.Management.Internal.Trace.Tracer ( src/Control/Distributed/Process/Management/Internal/Trace/Tracer.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Control/Distributed/Process/Management/Internal/Trace/Tracer.o )
+[20 of 28] Compiling Control.Distributed.Process.Management.Internal.Trace.Remote ( src/Control/Distributed/Process/Management/Internal/Trace/Remote.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Control/Distributed/Process/Management/Internal/Trace/Remote.o )
+[21 of 28] Compiling Control.Distributed.Process.Management.Internal.Table ( src/Control/Distributed/Process/Management/Internal/Table.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Control/Distributed/Process/Management/Internal/Table.o )
+[22 of 28] Compiling Control.Distributed.Process.Management ( src/Control/Distributed/Process/Management.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Control/Distributed/Process/Management.o )
+[23 of 28] Compiling Control.Distributed.Process.Management.Internal.Agent ( src/Control/Distributed/Process/Management/Internal/Agent.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Control/Distributed/Process/Management/Internal/Agent.o )
+[24 of 28] Compiling Control.Distributed.Process.Node ( src/Control/Distributed/Process/Node.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Control/Distributed/Process/Node.o )
+
+src/Control/Distributed/Process/Node.hs:51:1: Warning:
+    The import of ‘Data.List’ is redundant
+      except perhaps to import instances from ‘Data.List’
+    To import instances alone, use: import Data.List()
+[25 of 28] Compiling Control.Distributed.Process.Debug ( src/Control/Distributed/Process/Debug.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Control/Distributed/Process/Debug.o )
+[26 of 28] Compiling Control.Distributed.Process ( src/Control/Distributed/Process.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Control/Distributed/Process.o )
+[27 of 28] Compiling Control.Distributed.Process.Internal.Closure.Explicit ( src/Control/Distributed/Process/Internal/Closure/Explicit.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Control/Distributed/Process/Internal/Closure/Explicit.o )
+[28 of 28] Compiling Control.Distributed.Process.Closure ( src/Control/Distributed/Process/Closure.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Control/Distributed/Process/Closure.o )
+In-place registering distributed-process-0.6.6...
+Installing library in
+/Users/matt/.stack/snapshots/x86_64-osx/lts-6.27/7.10.3/lib/x86_64-osx-ghc-7.10.3/distributed-process-0.6.6-9VZaEnFgXxwKrMu3maGgik
+Registering distributed-process-0.6.6...

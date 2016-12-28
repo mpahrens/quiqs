@@ -1,0 +1,17 @@
+Configuring data-accessor-0.2.2.7...
+Building data-accessor-0.2.2.7...
+Preprocessing library data-accessor-0.2.2.7...
+[ 1 of 10] Compiling Data.Accessor.Private ( src-4/Data/Accessor/Private.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Data/Accessor/Private.o )
+[ 2 of 10] Compiling Data.Accessor.Basic ( src/Data/Accessor/Basic.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Data/Accessor/Basic.o )
+[ 3 of 10] Compiling Data.Accessor.MonadStatePrivate ( src/Data/Accessor/MonadStatePrivate.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Data/Accessor/MonadStatePrivate.o )
+[ 4 of 10] Compiling Data.Accessor.MonadState ( src/Data/Accessor/MonadState.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Data/Accessor/MonadState.o )
+[ 5 of 10] Compiling Data.Accessor.Container ( src/Data/Accessor/Container.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Data/Accessor/Container.o )
+[ 6 of 10] Compiling Data.Accessor.Show ( src/Data/Accessor/Show.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Data/Accessor/Show.o )
+[ 7 of 10] Compiling Data.Accessor.Tuple ( src/Data/Accessor/Tuple.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Data/Accessor/Tuple.o )
+[ 8 of 10] Compiling Data.Accessor.BinaryRead ( src/Data/Accessor/BinaryRead.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Data/Accessor/BinaryRead.o )
+[ 9 of 10] Compiling Data.Accessor.Example ( src/Data/Accessor/Example.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Data/Accessor/Example.o )
+[10 of 10] Compiling Data.Accessor    ( src/Data/Accessor.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Data/Accessor.o )
+In-place registering data-accessor-0.2.2.7...
+Installing library in
+/Users/matt/.stack/snapshots/x86_64-osx/lts-6.27/7.10.3/lib/x86_64-osx-ghc-7.10.3/data-accessor-0.2.2.7-Hzzw7HtnPRc9zDbsSXo8GC
+Registering data-accessor-0.2.2.7...
